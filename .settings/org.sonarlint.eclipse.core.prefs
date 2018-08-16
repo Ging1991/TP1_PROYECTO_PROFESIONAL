@@ -1,0 +1,4 @@
+autoEnabled=true
+eclipse.preferences.version=1
+extraProperties=
+fileExclusions=GLOB\:**/*DAO*.java\r\nFILE\:src/main/java/persistencia/conexion/Conexion.java\r\nDIRECTORY\:src/main/java/presentacion/reportes\r\nGLOB\:src/main/java/presentacion/vista/*.js
