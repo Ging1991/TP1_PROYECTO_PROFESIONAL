@@ -1,0 +1,4 @@
+drop table personas;
+drop table localidades;
+drop table tipo_contacto;
+

@@ -1,0 +1,40 @@
+CREATE TABLE tipo_contacto (
+	tipo_contacto_id int(3) AUTO_INCREMENT,
+	descripcion varchar(50) NOT NULL,
+	PRIMARY KEY (tipo_contacto_id)
+);
+
+CREATE TABLE localidades (
+	localidad_id int(5) AUTO_INCREMENT,
+	descripcion varchar(50) NOT NULL,
+	PRIMARY KEY (localidad_id)
+);
+
+CREATE TABLE personas (
+	persona_id int(10) AUTO_INCREMENT,
+	nombre varchar(45) NOT NULL,
+	telefono varchar(20) NOT NULL,
+	email VARCHAR(30) NOT NULL,
+	calle VARCHAR(30) NOT NULL,
+	numero VARCHAR(5) NOT NULL,
+	piso VARCHAR(5),
+	depto VARCHAR(5),
+	fecha_nacimiento DATE NOT NULL,
+	localidad_id int(5),
+	tipo_contacto_id int(5),
+	PRIMARY KEY (persona_id),
+	FOREIGN KEY (localidad_id) REFERENCES localidades(localidad_id) ON DELETE CASCADE,
+	FOREIGN KEY (tipo_contacto_id) REFERENCES tipo_contacto(tipo_contacto_id) ON DELETE CASCADE
+);
+
+insert into localidades(descripcion) values ("San Miguel");
+insert into localidades(descripcion) values ("Jose C. Paz");
+insert into localidades(descripcion) values ("Muñiz");
+insert into localidades(descripcion) values ("Moreno");
+insert into localidades(descripcion) values ("Polvorines");
+
+insert into tipo_contacto(descripcion) values ("Familia");
+insert into tipo_contacto(descripcion) values ("Amigos");
+insert into tipo_contacto(descripcion) values ("Trabajo");
+insert into tipo_contacto(descripcion) values ("Facultad");
+

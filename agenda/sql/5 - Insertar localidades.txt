@@ -1,0 +1,6 @@
+insert into localidades(nombre) values ("San Miguel");
+insert into localidades(nombre) values ("Jose C. Paz");
+insert into localidades(nombre) values ("Muñiz");
+insert into localidades(nombre) values ("Moreno");
+insert into localidades(nombre) values ("Polvorines");
+select * from localidades;

@@ -1,0 +1,31 @@
+CREATE TABLE personas (
+
+	persona_id int(10) AUTO_INCREMENT,
+
+	nombre varchar(45) NOT NULL,
+
+	telefono varchar(20) NOT NULL,
+
+	email VARCHAR(30) NOT NULL,
+
+	calle VARCHAR(30) NOT NULL,
+
+	numero VARCHAR(5) NOT NULL,
+
+	piso VARCHAR(5),
+
+	depto VARCHAR(5),
+
+	fecha_nacimiento DATE NOT NULL,
+
+	localidad_id int(5),
+
+	tipo_contacto_id int(5),
+
+	PRIMARY KEY (persona_id),
+
+	FOREIGN KEY (localidad_id) REFERENCES localidades(localidad_id) ON DELETE CASCADE,
+
+	FOREIGN KEY (tipo_contacto_id) REFERENCES tipo_contacto(tipo_contacto_id) ON DELETE CASCADE
+);
+
